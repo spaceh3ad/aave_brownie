@@ -9,7 +9,8 @@ def main():
 def get_weth():
     """Mints WETH by deposiyting ETH."""
     accounts = get_account()
-    weth = interface.IWeth(config["networks"][network.show_active()]["weth_roken"])
-    tx = weth.deposit({"from": accounts[0], "value": 0.1 * 10 ** 18})
+    weth = interface.IWeth(config["networks"][network.show_active()]["weth_token"])
+    tx = weth.deposit({"from": accounts[0], "value": 1 * 10 ** 16})
+    tx.wait(1)
     print(f"Received 0.1 WETH")
     return tx

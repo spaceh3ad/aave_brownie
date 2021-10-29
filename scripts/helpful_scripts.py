@@ -6,7 +6,7 @@ from brownie import (
 from web3 import Web3
 
 FORKED_LOCAL_ENVIROMENTS = ["mainnet-fork", "mainnet-fork-dev"]
-LOCAL_BLOCKCHAIN_ENVIROMENTS = ["development", "ganache-local"]
+LOCAL_BLOCKCHAIN_ENVIROMENTS = ["kovan", "development", "ganache-local"]
 
 
 def get_account(index=None, id=None):
